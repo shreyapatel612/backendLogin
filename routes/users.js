@@ -17,7 +17,7 @@ router.put('/update/:userId',userController.update);
 router.get('/logout',userController.logout);
 router.get('/',function(req,res){
   userModel.find({},function(err,data){
-    res.send({status : 'success',data : data});
+    res.send({message:"Successfully Fetch All Users",status : 'success',data : data});
   })
 })
 
