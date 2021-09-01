@@ -9,7 +9,7 @@ router.post('/insert',roleController.insert);
 
 router.get('/',function(res,res){
     roleModel.find({},function(err,data){
-        res.send({status : 'success',data :data});
+        res.send({status : 'success',message: "Successfully Fetch Roles",data :data});
     })
 });
 router.delete('/delete/:id',roleController.delete);
