@@ -1,6 +1,7 @@
 
 const mongoose = require('mongoose');
 var userModel = require('../models/User');
+var roleModel = require('../models/Role');
 const bcrypt = require('bcryptjs');
 var jwt = require('jsonwebtoken');
 const { name } = require('ejs');
@@ -92,6 +93,25 @@ exports.update = function(req,res,next){
            res.send({message:"Password Not Proper!",status:'Fail'});
        }
    })
+}
+
+exports.getuserById = function(req,res,next){
+    userModel.findById(req.params.id ,function(err,result){
+        if(err){
+            res.send({message:"Error in getting data",status:'fail'})
+        }else{
+            res.send({message:"Successfully Data Fetched",status:'success',data:result})
+        }
+    })
+}
+
+exports.delete= function(req,res,next){
+    userModel.findByIdAndDelete(req.params.id).then((result)=>{
+        if(!result){
+            return res.status(404).send({message : "Not Found",status : "fail"})
+        }
+        res.send({message : "User Deleted!",status : "success"});
+    })
 }
 
 exports.logout = function(req,res,next){

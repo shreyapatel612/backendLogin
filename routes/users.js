@@ -13,8 +13,10 @@ router.use(bodyParser.json());
 router.post('/register',userController.register);
 router.post('/login',userController.login);
 router.post('/adduser',userController.add_user);
-router.put('/update/:userId',userController.update);
+router.put('/editprofile/:userId',userController.update);
 router.get('/logout',userController.logout);
+router.get('/getuser/:id',userController.getuserById);
+router.delete('/delete/:id',userController.delete);
 router.get('/',function(req,res){
   userModel.find({},function(err,data){
     res.send({message:"Successfully Fetch All Users",status : 'success',data : data});
