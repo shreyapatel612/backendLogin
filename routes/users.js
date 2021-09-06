@@ -13,7 +13,7 @@ router.use(bodyParser.json());
 router.post('/register',userController.register);
 router.post('/login',userController.login);
 router.post('/adduser',userController.add_user);
-router.put('/editprofile/:userId',userController.update);
+router.put('/editprofile/:userId',userController.updateUser);
 router.get('/logout',userController.logout);
 router.get('/getuser/:id',userController.getuserById);
 router.delete('/delete/:id',userController.delete);

@@ -76,7 +76,7 @@ exports.add_user = function(req,res,next){
 })
 }
 
-exports.update = function(req,res,next){ 
+exports.updateUser = function(req,res,next){ 
    user_id = req.params.userId;
    bcrypt.hash(req.body.password,10,function(err,hash){
        if(!err){
