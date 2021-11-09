@@ -46,7 +46,7 @@ exports.login = function(req,res,next){
             else{
                 var token = jwt.sign({name : req.body.name , password : req.body.password},'secret');
                 result['token'] = token;
-                res.send({message : "login successfully!",status:'success',data : result,token : token});
+                res.send({message : "login successfully!",status:'success',user : user,token : token});
             }
         }
     })
