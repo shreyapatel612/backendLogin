@@ -20,6 +20,7 @@ exports.register = function(req,res,next){
         email : req.body.email,
         roleid : req.body.roleid
     });
+    console.log(details);
     details.save().then(
         doc =>
         {
@@ -64,6 +65,7 @@ exports.add_user = function(req,res,next){
         email : req.body.email,
         roleid : req.body.roleid
     });
+    console.log(details);
     details.save().then(
         doc =>
         {

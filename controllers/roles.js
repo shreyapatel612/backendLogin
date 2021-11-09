@@ -17,7 +17,19 @@ exports.insert = function(req,res,next){
         }
     )
 }
-
+exports.update = function(req,res){
+    role_id = req.params.id;
+    var newValues ={ $set: {name : req.body.name }}
+    roleModel.findByIdAndUpdate(role_id,newValues,{"new" : true},function(err,result){
+        if(err){
+            console.log(err);
+            res.send({message:"Error While Updating Data!",status:'fail'})
+        }
+        else{
+            res.send({message:"Successfully Updated!",status : 'success',result})
+        }
+    })
+}
 exports.delete = function(req,res){
     roleModel.findByIdAndDelete(req.params.id).then((result)=>{
         if(!result){

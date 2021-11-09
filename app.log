@@ -1,0 +1,97 @@
+{"level":"error","message":"error"}
+{"level":"warn","message":"warn"}
+{"level":"info","message":"info"}
+{"level":"verbose","message":"verbose"}
+{"level":"debug","message":"debug"}
+{"level":"info","message":"app is running on port:"}
+{"level":"error","message":"error"}
+{"level":"warn","message":"warn"}
+{"level":"info","message":"info"}
+{"level":"verbose","message":"verbose"}
+{"level":"debug","message":"debug"}
+{"level":"info","message":"app is running on port:"}
+{"level":"error","message":"error"}
+{"level":"warn","message":"warn"}
+{"level":"info","message":"info"}
+{"level":"info","message":"app is running on port:"}
+error - error
+warn - warn
+info - info
+info - app is running on port:
+[error] - error
+[warn] - warn
+[info] - info
+[info] - app is running on port:
+[ERROR  ] - error
+[WARN   ] - warn
+[INFO   ] - info
+[INFO   ] - app is running on port:
+ERROR   - error
+WARN    - warn
+INFO    - info
+INFO    - app is running on port:
+undefined
+undefined
+undefined
+undefined
+ERROR   - error
+WARN    - warn
+INFO    - info
+INFO    - app is running on port:
+ERROR   - error
+WARN    - warn
+INFO    - info
+INFO    - app is running on port:
+ERROR   - error
+WARN    - warn
+INFO    - info
+INFO    - app is running on port: 8080
+ERROR   - error
+WARN    - warn
+INFO    - info
+INFO    - app is running on port: 8080
+ERROR   - error
+WARN    - warn
+INFO    - info
+INFO    - app is running on port: 8080
+INFO    - connected to Database
+ERROR   - error
+WARN    - warn
+INFO    - info
+INFO    - app is running on port: 8080
+ERROR   - error
+WARN    - warn
+INFO    - info
+INFO    - app is running on port: 8080
+ERROR   - error
+WARN    - warn
+INFO    - info
+INFO    - app is running on port: 8080
+ERROR   - error
+WARN    - warn
+INFO    - info
+INFO    - app is running on port: 8080
+[object Object] ERROR   - error
+[object Object] WARN    - warn
+[object Object] INFO    - info
+[object Object] INFO    - app is running on port: 8080
+[object Object] ERROR   - error
+[object Object] WARN    - warn
+[object Object] INFO    - info
+[object Object] INFO    - app is running on port: 8080
+ERROR   - error
+WARN    - warn
+INFO    - info
+INFO    - app is running on port: 8080
+ERROR   - error
+WARN    - warn
+INFO    - info
+INFO    - app is running on port: 8080
+ERROR   - error
+WARN    - warn
+INFO    - info
+INFO    - app is running on port: 8080
+ERROR   - error
+WARN    - warn
+INFO    - info
+INFO    - app is running on port: 8080

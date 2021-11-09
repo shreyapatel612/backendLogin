@@ -2,7 +2,7 @@ var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+var logger = require('./src/logger');
 var mongoose = require('mongoose');
 var session = require('express-session')
 var cors = require('cors');
@@ -18,14 +18,14 @@ var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
-var corsOptions = {
-  origin: 'http://localhost:3000',
-  optionsSuccessStatus: 200 // For legacy browser support
-}
+// var corsOptions = {
+//   origin: 'http://localhost:3000',
+//   optionsSuccessStatus: 200 // For legacy browser support
+// }
 
-app.use(cors(corsOptions));
-console.log('local url:',corsOptions.origin);
-app.use(logger('dev'));
+app.use(cors());
+//console.log('local url:',corsOptions.origin);
+//app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
@@ -81,6 +81,19 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+var port = 8080;
+
+logger.error("error");
+logger.warn("warn");
+logger.info("info");
+logger.verbose("verbose");
+logger.debug("debug");
+logger.silly("silly");
+
+app.listen(port,()=>{
+  logger.info("app is running on port: 8080");
+})
 
 module.exports = app;
 

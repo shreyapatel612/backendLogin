@@ -6,7 +6,7 @@ var jwt = require('jsonwebtoken');
     var headerToken = req.headers.authorization.split(" ")[1];
     console.log(headerToken);
     try{
-       var decode = jwt.verify(headerToken, 'AdminSecret');
+       var decode = jwt.verify(headerToken, process.env.JWT_KEY);
        req.usertoken11 = decode;
        console.log(decode);
        next();
