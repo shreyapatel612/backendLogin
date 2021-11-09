@@ -34,18 +34,18 @@ exports.register = function(req,res,next){
 }
 
 exports.login = function(req,res,next){
-    userModel.findOne({ email : req.body.email },function(err,result){
-        if(!result){
+    userModel.findOne({ email : req.body.email },function(err,user){
+        if(!user){
             res.send({message : "Email And Password Did Not Match",status: 'fail'});
         }
         else
         {
-            if(!bcrypt.compareSync(req.body.password, result.password)){
+            if(!bcrypt.compareSync(req.body.password, user.password)){
                 res.send( { message : "The password is invalid",status: 'fail'});
             }
             else{
                 var token = jwt.sign({name : req.body.name , password : req.body.password},'secret');
-                result['token'] = token;
+                user['token'] = token;
                 res.send({message : "login successfully!",status:'success',user : user,token : token});
             }
         }
